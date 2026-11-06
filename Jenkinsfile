@@ -33,7 +33,7 @@ pipeline {
                     IMAGE_TAG="${BUILD_NUMBER}-${SHORT_SHA}"
 
                     podman build \
-                        --file Containerfile \
+                        --file Dockerfile \
                         --tag "${IMAGE_REPO}:${IMAGE_TAG}" \
                         .
                 '''
